@@ -60,8 +60,10 @@ target_compile_features(archimaga_archimaga PUBLIC cxx_std_17)
 find_package(fmt REQUIRED)
 target_link_libraries(archimaga_archimaga PRIVATE fmt::fmt)
 
-add_subdirectory(deps/SDL)
-target_link_libraries(archimaga_archimaga PRIVATE SDL2)
+find_package(SDL2 REQUIRED)
+target_link_libraries(archimaga_archimaga PRIVATE 
+    $<TARGET_NAME_IF_EXISTS:SDL2::SDL2main>
+    $<IF:$<TARGET_EXISTS:SDL2::SDL2>,SDL2::SDL2,SDL2::SDL2-static>)
 
 find_package(imgui CONFIG REQUIRED)
 target_link_libraries(archimaga_archimaga PRIVATE imgui::imgui)
