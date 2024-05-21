@@ -2,9 +2,7 @@
 
 #include "archimaga/archimaga.hpp"
 
-#include <SDL2/SDL.h>
 #include <fmt/core.h>
-#include <imgui.h>
 
 exported_class::exported_class()
     : m_name {fmt::format("{}", "archimaga")}

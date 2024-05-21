@@ -1,18 +1,19 @@
 {
-    "name": "archimaga",
-    "version-semver": "0.1.0",
-    "dependencies": [
-        "sdl2",
-        "fmt",
-        "imgui"
-    ],
-    "default-features": [],
-    "features": {
-        "test": {
-            "description": "Dependencies for testing",
-            "dependencies": [
-                "catch2"
-            ]
-        }
+  "name": "archimaga",
+  "version-semver": "0.1.0",
+  "dependencies": [
+    "sdl2",
+    "fmt",
+    "imgui"
+  ],
+  "default-features": [],
+  "features": {
+    "test": {
+      "description": "Dependencies for testing",
+      "dependencies": [
+        "catch2"
+      ]
     }
+  },
+  "builtin-baseline": "8daf70c56ba9581f5251a5d4675eb771b6b34957"
 }
